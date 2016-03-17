@@ -59,7 +59,7 @@ def getPIN(username):
 
 
 def write_conf():
-    pin = getPIN(sys.argv[0])
+    pin = getPIN(sys.argv[1])
 
     with open('provider_tpl', 'r') as fp:
         template = fp.read()
@@ -79,5 +79,3 @@ def write_conf():
 if __name__ == '__main__':
     write_conf()
     os.system('pon dsl-provider')
-    os.system('route del default')
-    os.system('route add default dev ppp0')
