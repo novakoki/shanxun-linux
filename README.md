@@ -2,7 +2,7 @@ shanxun-linux
 ====
 A shanxun client for linux users in Python.
 
-Requriments
+Requriements
 ----
 - pppoeconf
 ```sh
@@ -16,10 +16,15 @@ Usage
 ```sh
 sudo python shanxun.py your_username your_password
 ```
-You'd better set ppp as the default route.
+
+Show ppp log
+```sh
+plog
+```
+
+Set ppp as the default route.
 ```sh
 route # Query route table and find the ppp device
-sudo route del default
 sudo route add default dev ppp0 # Example 
 ```
 To stop the connection
